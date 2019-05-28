@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.register',
     'hbpro',
+    'apps.register',
+    'apps.login',
 ]
 
 MIDDLEWARE = [
