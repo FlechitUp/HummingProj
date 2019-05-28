@@ -1,0 +1,50 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+
+{% block main %}
+<section class="page-section" id="login">
+    <div class="container">
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-secondary mb-0">Log in</h2>
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+<!-- Log in Section Form -->
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+       
+        <form name="sentMessage" id="loginForm" novalidate="novalidate">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-1">
+                    <label>Nick name</label>
+                    <input class="form-control" id="nick_name" type="text" placeholder="Nick name" required="required"
+                        data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+                       
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-1">
+                    <label>Password</label>
+                    <input class="form-control" id="passw1" type="password" placeholder="Password" required="required"
+                        data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>            
+          
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</section>
+{% endblock %}
