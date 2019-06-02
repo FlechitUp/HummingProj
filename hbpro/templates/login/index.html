@@ -18,7 +18,9 @@
 <div class="row">
     <div class="col-lg-8 mx-auto">
        
-        <form name="sentMessage" id="loginForm" novalidate="novalidate">
+        <form action="/login/" method="post" name="sentMessage" id="loginForm" novalidate="novalidate">
+            {% csrf_token %}
+            {{ form.as_p }}
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-1">
                     <label>Nick name</label>

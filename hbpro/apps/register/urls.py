@@ -1,8 +1,7 @@
 from django.conf.urls import url
 
-from apps.register.views import index
+from apps.register.views import register_db
 
 urlpatterns = [
-    url(r'^$',index, name='register'),
-    
+    url(r'^',register_db, name='register'),    
 ]

@@ -1,8 +1,8 @@
 from django.conf.urls import url
 
-from apps.login.views import index2
+from apps.login.views import login
 
 urlpatterns = [
-    url(r'^$',index2, name='login'),
+    url(r'^$',login, name='login'),
     
 ]
