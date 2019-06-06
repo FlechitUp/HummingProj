@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.initpage',
     'apps.register',
     'apps.login',
+    'apps.user', #deberia llamarse allModels
     'bootstrap4',
 ]
 
@@ -133,3 +134,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'staticfiles'),)
 
 
 #STATIC_DIRS = (os.path.join(BASE_DIR,'static'),)
+
+#User Authenication and Login¶
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.SHA1PasswordHasher',
+    'django.contrib.auth.hashers.MD5PasswordHasher',
+    'django.contrib.auth.hashers.CryptPasswordHasher',
+)

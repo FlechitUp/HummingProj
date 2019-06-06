@@ -1,16 +1,15 @@
 from django.db import models
-
-# Create your models here.
+#from django import forms
 
 class Student(models.Model):
     name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    nick_name = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
-    password_confir = models.CharField(max_length=50)
+    nick_name = models.CharField(max_length=50, blank='False', null='False')
+    password = models.CharField(max_length=100, blank='False')
+    #password_confir = models.CharField(max_length=50, null='True')
     age = models.IntegerField()
-    e_mail = models.CharField(max_length=50)
-    number_phone = models.IntegerField()
+    e_mail = models.CharField(max_length=50, blank='False')
+    number_phone = models.IntegerField(blank='False', null='True')
     github = models.CharField(max_length=50)
     is_working = models.BooleanField(default=True)
     #subject_student = models.ManyToManyField(Subject)

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .form import studentForm
 
 def register_db(request):
-	import pudb; pudb.set_trace()
+	#import pudb; pudb.set_trace()
 	if request.method=='POST':
 		form = studentForm(request.POST)
 		if form.is_valid():
