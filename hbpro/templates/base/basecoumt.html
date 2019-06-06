@@ -1,4 +1,4 @@
-{% load staticfiles i18n %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,15 +7,16 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
+
     <title>Hummingbird</title>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
+
     <!-- Custom fonts for this theme -->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-   
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
     <!-- Theme CSS -->
     <link href="{% static '/css/freelancer.min.css' %}" rel="stylesheet">
 
@@ -36,51 +37,44 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">           
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#learn">Learning</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#progress">Progress</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Team</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'register' %}">Register</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'login' %}">Log in</a>
-                    </li>
+                    <li class="nav-item mx-0 mx-lg-1 dropdown">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            aa!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'login'%}">Log Out</a>
+                        </div>
+                    </li>                    
+                    <li class="nav-item avatar">
+                        <a class="nav-link" id="User" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="md-avatar rounded-circle size-3" alt="avatar image">
+                        </a>                       
+                    </li>                    
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Masthead -->
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
 
-            <!-- Masthead Avatar Image -->
-            <img class="masthead-avatar mb-3" src="{% static 'img/hum.svg' %}" alt="logo">
-
-            <!-- Masthead Heading -->
-            <h1 class="masthead-heading text-uppercase mb-0">Hummingbird</h1>
-
-            
-            <!-- Masthead Subheading -->
-            <p class="masthead-subheading font-weight-light mb-0" style="text-shadow: -1px 0px white, 1px -2px rgb(0, 0, 0)">Learn now, pay later</p>
-            <br>
-            <a class="btn btn-primary btn-xl js-scroll-trigger shadow-lg p-3 mb-5" href="{% url 'register' %}">Register now!</a>
-        </div>
-    </header>
-
-   
-{% block main %}
-{% endblock %}
+    {% block main %}
+    {% endblock %}
 
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
             <div class="row">
-                
+
                 <!-- Footer Location -->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Location</h4>
@@ -108,7 +102,7 @@
                 <!-- Footer About Text -->
                 <div class="col-lg-4">
                     <h4 class="text-uppercase mb-4">About Hummingbird</h4>
-                    <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         <a href="http://startbootstrap.com">Talk with us</a>.</p>
                 </div>
 

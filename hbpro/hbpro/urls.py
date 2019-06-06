@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^initpage/',include('apps.initpage.urls')),
     url(r'^register/',include('apps.register.urls')),
     url(r'^login/', include('apps.login.urls')),
+     url(r'^contentuser/', include('apps.contentuser.urls')),
+    url(r'^', include('django.contrib.auth.urls')),
 ]

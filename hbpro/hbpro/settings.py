@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.register',
     'apps.login',
     'apps.user', #deberia llamarse allModels
+    'apps.contentuser',
     'bootstrap4',
 ]
 
