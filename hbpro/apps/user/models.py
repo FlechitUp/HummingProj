@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class User(models.Model):
     nick_name = models.CharField(max_length=50, blank='False', null='False')
     name = models.CharField(max_length=50)
@@ -19,13 +20,15 @@ class Student2(User):
     is_working = models.BooleanField(default=False)
 
     def __str__(self):
-        return (self.name)
+        return self.nick_name
 
-class Mentor(User):
+
+class Mentor(User, models.Model):
     is_mentorizing = models.BooleanField(default=False)
-    
+
     def __str__(self):
-        return (self.name)
+        return (self.nick_name)
+
 
 class Program(models.Model):
     year = models.SmallIntegerField()
@@ -34,11 +37,16 @@ class Program(models.Model):
     def __str__(self):
         return (self.title)
 
+
 class Students_Mentor(models.Model):
-    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE)  # One to many = foreign
-    studentA = models.ForeignKey(Student2, null=True, related_name='studentA', on_delete=models.CASCADE)
-    studentB = models.ForeignKey(Student2, null=True, related_name='studentB', on_delete=models.CASCADE)    
+    mentor = models.ForeignKey(
+        Mentor, on_delete=models.CASCADE)  # One to many = foreign
+    studentA = models.ForeignKey(
+        Student2, null=True, related_name='studentA', on_delete=models.CASCADE)
+    studentB = models.ForeignKey(
+        Student2, null=True, related_name='studentB', on_delete=models.CASCADE)
     program = models.ForeignKey(Program, on_delete=models.CASCADE)
+
 
 class Course(models.Model):
     name = models.CharField(max_length=50)
@@ -47,10 +55,11 @@ class Course(models.Model):
     def __str__(self):
         return (self.name)
 
+
 class Courses_Student(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)    
     student2 = models.ForeignKey(Student2, on_delete=models.CASCADE)
     percentage = models.IntegerField()
 
-    def __str__(self):
-        return (self._check_single_primary_key)
+    #def __str__(self):
+    #    return (self._check_single_primary_key)
