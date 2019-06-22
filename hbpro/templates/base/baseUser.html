@@ -39,10 +39,10 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#progress" active>Progress</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#progress">Progress</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Students</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'contentuseruser' %}">Team</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1 dropdown">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#" id="navbarDropdown"
@@ -50,18 +50,17 @@
                             {{ stu.nick_name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Link</a>
                             <a class="dropdown-item" href="#">Settings</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{% url 'login'%}">Log Out</a>
                         </div>
-                    </li>
+                    </li>                    
                     <li class="nav-item avatar">
                         <a class="nav-link" id="User" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg"
-                                class="md-avatar rounded-circle size-3" alt="avatar image">
-                        </a>
-                    </li>
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="md-avatar rounded-circle size-3" alt="avatar image">
+                        </a>                       
+                    </li>                    
                 </ul>
             </div>
         </div>
@@ -78,14 +77,14 @@
 
                 <!-- Footer Location -->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <h5 class="mb-4">Location</h5>
                     <p class="lead mb-0">Peruvian net
                         <br>Calle siempre Viva</p>
                 </div>
 
                 <!-- Footer Social Icons -->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <h5 class="mb-4">Around the Web</h5>
                     <a class="btn btn-outline-light btn-social mx-1" href="#">
                         <i class="fab fa-fw fa-facebook-f"></i>
                     </a>
@@ -102,8 +101,8 @@
 
                 <!-- Footer About Text -->
                 <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">About Hummingbird</h4>
-                    <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <h5 class="mb-2">About Hummingbird</h5>
+                    <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         <a href="http://startbootstrap.com">Talk with us</a>.</p>
                 </div>
 

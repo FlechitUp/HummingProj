@@ -1,4 +1,4 @@
-{% extends "base/baseMemtor.html" %}
+{% extends "base/baseUser.html" %}
 {% load staticfiles %}
 
 {% block main %}
@@ -8,20 +8,30 @@
     <p>
         <table class="table">
             <tr>
-                <td><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="Avatar"
-                class="md-avatar rounded-circle size-3"></td>
-                <td>{{ sm.studentA.name }}<br>
-                Student<br>
-                {{ sm.studentA.github }}<br>
-                {{ sm.studentA.e_mail }}</td>
+                <td><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Avatar"
+                        class="md-avatar rounded-circle size-8"></td>
+                <td>{{ sm.mentor.name }}<br>
+                    Mentor<br>
+                    {{ sm.mentor.github }}<br>
+                    {{ sm.mentor.e_mail }}<br>
+                    {{ sm.mentor.number_phone }}<br>
+                </td>
             </tr>
             <tr>
                 <td><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="Avatar"
-                class="md-avatar rounded-circle size-3"></td>
+                        class="md-avatar rounded-circle size-3"></td>
+                <td>{{ sm.studentA.name }}<br>
+                    Student<br>
+                    {{ sm.studentA.github }}<br>
+                    {{ sm.studentA.e_mail }}</td>
+            </tr>
+            <tr>
+                <td><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="Avatar"
+                        class="md-avatar rounded-circle size-3"></td>
                 <td>{{ sm.studentB.name }} <br>
-                Student<br>
-                {{ sm.studentB.github }}<br>
-                {{ sm.studentB.e_mail }}</td>
+                    Student<br>
+                    {{ sm.studentB.github }}<br>
+                    {{ sm.studentB.e_mail }}</td>
             </tr>
         </table>
     </p>

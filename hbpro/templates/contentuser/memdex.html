@@ -1,4 +1,4 @@
-{% extends "base/basememcoumt.html" %}
+{% extends "base/baseMemtor.html" %}
 {% load staticfiles %}
 
 {% block main %}
@@ -6,6 +6,7 @@
 <section class="page-section" id="contentuser"></section>
 <div class="col-auto">
     <h3 class="mb-4">Progress memtor</h3>
+    <form  method="put" novalidate>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -16,26 +17,18 @@
             </tr>
         </thead>
         <tbody>
+            {% for curso in cursos %}
             <tr>
-                <th scope="row">1</th>
-                <td>Full-Stack web development</td>
-                <td><input type="text" name="lname"></td>
+                <th scope="row"></th>
+                <td>{{ curso.course.name }}</td>
+                <td><input type="number" name='{{ curso.id }}' min={{ curso.percentage }} max="100" value={{ curso.percentage }}> </td>
                 <td>Today</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Topic 1 Lorem ipsum</td>
-                <td><input type="text" name="lname"></td>
-                <td>Today</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Topic 2 Lorem ipsum</td>
-                <td><input type="text" name="lname"></td>
-                <td>--</td>
-            </tr>
+            {% endfor %}
         </tbody>
+        <td><input type="submit" value="Submit"></td>
     </table>
+    </form>
 </div>
 </section>
 

@@ -6,7 +6,6 @@ class Student(models.Model):
     last_name = models.CharField(max_length=50)
     nick_name = models.CharField(max_length=50, blank='False', null='False')
     password = models.CharField(max_length=100, blank='False')
-    #password_confir = models.CharField(max_length=50, null='True')
     age = models.IntegerField()
     e_mail = models.CharField(max_length=50, blank='False')
     number_phone = models.IntegerField(blank='False', null='True')

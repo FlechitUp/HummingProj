@@ -1,11 +1,11 @@
-{% extends "base/basecoumt.html" %}
+{% extends "base/baseUser.html" %}
 {% load staticfiles %}
 
 {% block main %}
 
 <section class="page-section" id="contentuser"></section>
 <div class="col-auto">
-<h3 class="mb-4">Progress</h3>
+<h3 class="mb-4">Progress Studemt</h3>
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -16,24 +16,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Full-Stack web development</td>
-            <td>50%</td>
-            <td>Today</td>
-        </tr>
+       
+        {% for curso in cursos %}
         <tr>           
-            <th scope="row">2</th>
-            <td>Topic 1 Lorem ipsum</td>
-            <td>{{ stu.nick_name }}</td>
+            <th scope="row"></th>
+            <td>{{ curso.course.name }}</td>
+            <td>{{ curso.percentage }} %</td>
             <td>Today</td>
         </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Topic 2 Lorem ipsum</td>
-            <td>0%</td>
-            <td>--</td>
-        </tr>
+        {% endfor %}
+       
     </tbody>
 </table>
 </div>

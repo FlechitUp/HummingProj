@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'apps.initpage',
     'apps.register',
     'apps.login',
-    'apps.user', #deberia llamarse allModels
-    'apps.contentuser',
+    'apps.user', #deberia llamarse allModels    
     'bootstrap4',
 ]
 
@@ -83,11 +82,11 @@ WSGI_APPLICATION = 'hbpro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'hb',
-        'USER':'hbuser',
-        'PASSWORD':'hbuser1',
-        'HOST':'localhost',
-        'PORT':'',
+        'NAME': 'hbdb5',
+        'USER': 'xime',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

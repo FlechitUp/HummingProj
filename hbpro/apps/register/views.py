@@ -11,13 +11,7 @@ def register_db(request):
 			name = form.cleaned_data['name']
 			last_name = form.cleaned_data['last_name']
 			print(name,last_name)
-			return render(request, 'login/index.html')
-		"""
-								cont.name=request.POST['name']
-								cont.last_name=request.POST['email']
-								cont.github=request.POST['name']
-								cont.is_working=request.POST['name']
-								cont.save()"""
+			return render(request, 'login/index.html')		
 	else:
 		form = studentForm()
 		return render(request,'register/index.html',{'form':form})
