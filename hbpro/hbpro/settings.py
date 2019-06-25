@@ -37,12 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'hbpro',
     'apps.initpage',
     'apps.register',
     'apps.login',
-    'apps.user', #deberia llamarse allModels    
+    'apps.user', #deberia llamarse allModels 
+    'apps.chat',   
     'bootstrap4',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -82,14 +85,25 @@ WSGI_APPLICATION = 'hbpro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hbdb5',
-        'USER': 'xime',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'NAME':'hbp',
+        'USER':'postgres',
+        'PASSWORD':'postgres',
+        'HOST':'localhost',
         'PORT': '5432',
     }
 }
 
+
+# channels settings
+ASGI_APPLICATION = "hbpro.routing.application"
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('redis', 6378)],
+        },
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
