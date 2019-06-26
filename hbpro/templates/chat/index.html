@@ -1,14 +1,16 @@
 {% extends "chat/base.html" %}
 {% block content %}
-<section class="page-section" id="contentuser"></section>
-<div class="col-auto table-responsive">
+
+<section class="page-section" id="contentuser">
+  <div class="col-auto table-responsive">
     <h3 class="mb-4">Team</h3>
     <div class="form-group">
-        <label for="room-name-input">What chat room would you like to enter?</label>
-        <input type="text" class="form-control" 
-                id="room-name-input" />
-    </div>  
-        <input id="room-name-submit" class="btn btn-success" type="button" value="Chating" onclick="click_()"/>
+      <label for="room-name-input">What chat room would you like to enter?</label>
+      <input type="text" class="form-control" id="room-name-input" />
+    </div>
+    <input id="room-name-submit" class="btn btn-success" type="button" value="Chating" onclick="click_()" />
+  </div>
+</section>
 {% endblock %}
 
 
